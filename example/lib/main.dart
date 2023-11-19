@@ -13,8 +13,7 @@ void main() async {
 
   ByteData byteData = await rootBundle.load('images/bill.png');
   File x = await File("${documentsDirectory.path}/bill.png").writeAsBytes(
-      byteData.buffer
-          .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
+      byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
   path = x.path;
   print(await x.length());
 
